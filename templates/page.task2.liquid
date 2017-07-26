@@ -12,11 +12,11 @@
 
 	$(document).on('click', '#show_slider', function() {
 		$(".slider_wrapper").append("<div class=sl-slider><div><img src={{ 'sl1.png' | asset_img_url: 'medium' }}></div><div><img src={{ 'sl2.png' | asset_img_url: 'medium' }}></div><div><img src={{ 'sl3.png' | asset_img_url: 'medium' }}></div></div>");
+		
+		$('.sl-slider').slick({
+     		slidesToShow: 1,
+     		dots: true
+ 		});
 	});
-
-	$('.sl-slider').slick({
-     slidesToShow: 1,
-     dots: true
- 	});
 	
 </script>
