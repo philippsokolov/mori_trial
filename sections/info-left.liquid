@@ -3,7 +3,7 @@
         <img src="{{ 'image2.jpg' | asset_url }}" alt="">
     </div>
     <div class="info-left-content">
-    {% if section.settings.header != blank %}
+        {% if section.settings.header != blank %}
             <h1>{{ section.settings.header | escape}}</h1>
         {% endif %}
         {% if section.settings.text != blank %}
@@ -33,6 +33,64 @@
 {% endschema %}
 
 {% stylesheet %}
+  .info-left {
+      max-width: 100%;
+      background-image: url("image2.jpg");
+      height: 750px;
+      background-position: left;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .info-image-left {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  }
+
+  .info-left-content {
+      text-align: center;
+      position: absolute;
+      top: 60%;
+      left: 30%;
+      transform: translate(-60%, -70%);
+      font-family: 'Raleway', sans-serif;
+      height: 200px;
+      width: 600px;
+  }
+
+  @media screen and (max-width: 1330px) {
+      .info-left-content {
+          top: 60%;
+          left: 30%;
+          transform: translate(-60%, -70%);
+          height: 300px;
+          width: 400px;
+      }
+  }
+
+  @media screen and (max-width: 960px) {
+      .info-left-content {
+          top: 40%;
+          left: 30%;
+          transform: none;
+          height: 300px;
+          width: 400px;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      .info-left-content {
+          top: 60%;
+          left: 40%;
+          width: 80%;
+          height: auto;
+          transform: translate(-40%, -30%);
+          color: #ffffff;
+      }
+  }
 {% endstylesheet %}
 
 {% javascript %}

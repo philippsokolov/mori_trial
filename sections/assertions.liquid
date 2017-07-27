@@ -8,7 +8,7 @@
             {% endif %}
         {% endfor %}
     </div>
-    <a href="" class="btn">{% if section.setting.buttontext != blank %}{{ section.settings.buttontext }}{% endif %}</a>
+    <a href="" class="btn">{% if section.settings.buttontext != blank %}{{ section.settings.buttontext }}{% endif %}</a>
 </div>
 
 {% schema %}
@@ -40,6 +40,27 @@
 {% endschema %}
 
 {% stylesheet %}
+    /* Assertions  */
+
+    .assertions {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #efefef;
+        border-top: 1px solid #efefef;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .assertion-container {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .assertion {
+        font-style: italic;
+    }
 {% endstylesheet %}
 
 {% javascript %}
