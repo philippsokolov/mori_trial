@@ -1,0 +1,106 @@
+<div class="page-content">
+  <div id="top-section">
+
+{% if section.settings.image1 != blank %}
+  <img id="image_1" src="{{ section.settings.image1 | img_url: 'master' }}"/>
+{% endif %}
+
+  <div class="caption-wrap">
+    <h1>{{ section.settings.text1 }}</h1>
+    <h3>{{ section.settings.text2 }}</h3>
+</div>
+</div>
+  <div class="random-section">
+  <h4 class="blocky">
+    {% if section.settings.benefit1 != blank %}
+    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit1 }}&nbsp;&nbsp;
+    {% endif %}
+    {% if section.settings.benefit1 != blank %}
+    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit2 }}&nbsp;&nbsp;
+    {% endif %}
+    {% if section.settings.benefit1 != blank %}
+    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit3 }}
+    {% endif %}
+
+  </h4>
+  <a class="btn buynow" href='https://babymori.com/collections/mori-baby-essentials/products/yoga-pant'>{{ section.settings.button_text }}</a>
+  </div>
+
+  <div class="split-screen"><h2>{{ section.settings.heading }}</h2>
+    <h4>{{ section.settings.descriptive_text }}</h4></div>
+  </div>
+<div class="bottom_image">
+<img src="{{ section.settings.image3 | img_url: 'master' }}"/>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Content",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "image 2"
+      },
+      {
+        "type": "text",
+        "id": "text1",
+        "label": "text 1",
+        "default": "Crafted from bamboo and organic cotton"
+      },
+      {
+        "type": "text",
+        "id": "text2",
+        "label": "text 2",
+        "default": "MORI Yoga Pants feature a subtle elasticated waistband and to make sure they stay in place, and a low rise crotch with cute pocket detail for ample nappy space and movement."
+      },
+      {
+        "type": "text",
+        "id": "benefit1",
+        "label": "benefit 1",
+        "default": "Allergy friendly"
+      },
+      {
+        "type": "text",
+        "id": "benefit2",
+        "label": "benefit 2",
+        "default": "Free returns"
+      },
+      {
+        "type": "text",
+        "id": "benefit3",
+        "label": "benefit 3",
+        "default": "Free UK shipping over £50"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "button text",
+        "default": "Buy now"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Text",
+        "default": "Colours and styles"
+      },
+      {
+        "type": "text",
+        "id": "descriptive_text",
+        "label": "Descriptive Text",
+        "default": "All styles feature a white front with preferred colour on the back of the leg to create a stylish design. MORI’s yoga pants can be paired with our t-shirts or cardigans for a daytime outfit, or worn as pyjamas with a bodysuit."
+      },
+      {
+        "type": "image_picker",
+        "id": "image3",
+        "label": "image 3"
+      }
+    ]
+  }
+{% endschema %}

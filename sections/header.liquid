@@ -1,12 +1,41 @@
-<div class="trace" id="top-margin-main">
-  <div class="logo"><img src="{{ 'logo-resized.jpg' | asset_img_url: '200x' }}" /></div>
+<div id="top-margin-main">
+  <div class="logo smaller">
+{% if section.settings.mori_logo != blank %}
+    <a href='https://babymori.com/' target="_target">
+    <img src="{{ section.settings.mori_logo | img_url: 'master' }}"/></a>
+{% endif %}
+  </div>
 </div>
-<div id="cover-image-feature">
-<h1>Yoga Pants</h1>
-<h3 class="cover-ethos">We're making playtimes<br>
-fun and sleeptimes peaceful
-</p>
-<button id="show-more" class="btn">Show more</button>
+<div class="head-content">
+<div class="owl-carousel owl-theme">
+
+
+<div class="owl1">
+  <img src="{{ section.settings.carousel1 | img_url: 'master' }}"/></a>
+  <h2>{{ section.settings.owl_heading1 }}</h2>
+  <h1>{{ section.settings.owl_text1}}</h1>
+  <a class="btn show-more">{{section.settings.button_text1}}</a>
+</div>
+<div class="owl2">
+  <img src="{{ section.settings.carousel2 | img_url: 'master' }}"/></a>
+  <h2>{{ section.settings.owl_heading2 }}</h2>
+  <h1>{{ section.settings.owl_text2}}</h1>
+  <a class="btn show-more">{{section.settings.button_text2}}</a>
+</div>
+<div class="owl3">
+  <img src="{{ section.settings.carousel3 | img_url: 'master' }}"/></a>
+  <h2>{{ section.settings.owl_heading3 }}</h2>
+  <h1>{{ section.settings.owl_text3}}</h1>
+  <a class="btn show-more">{{section.settings.button_text3}}</a>
+</div>
+<div class="owl4">
+  <img src="{{ section.settings.carousel4 | img_url: 'master' }}"/></a>
+  <h2>{{ section.settings.owl_heading4 }}</h2>
+  <h1>{{ section.settings.owl_text4 }}</h1>
+  <a class="btn show-more" >{{section.settings.button_text4}}</a>
+</div>
+
+</div>
 </div>
 {% schema %}
   {
@@ -14,24 +43,100 @@ fun and sleeptimes peaceful
     "settings": [
       {
         "type": "image_picker",
-        "id": "logo",
+        "id": "mori_logo",
         "label": "Logo image"
       },
       {
-        "type": "range",
-        "id": "logo_max_width",
-        "min": 50,
-        "max": 450,
-        "step": 10,
-        "unit": "px",
-        "label": "Custom logo width",
-        "default": 250
+        "type": "image_picker",
+        "id": "carousel1",
+        "label": "Carousel 1"
       },
       {
-        "type": "link_list",
-        "id": "main_linklist",
-        "label": "Menu",
-        "default": "main-menu"
+        "type": "image_picker",
+        "id": "carousel2",
+        "label": "Carousel 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "carousel3",
+        "label": "Carousel 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "carousel4",
+        "label": "Carousel 4"
+      },
+      {
+        "type": "text",
+        "id": "owl_text1",
+        "label": "owl text 1",
+        "default": "We're making playtimes fun and sleeptimes peaceful"
+      },
+      {
+        "type": "text",
+        "id": "owl_heading1",
+        "label": "owl heading 1",
+        "default": "Yoga Pants"
+      },
+      {
+        "type": "text",
+        "id": "button_text1",
+        "label": "button text 1",
+        "default": "Show more"
+      },
+      {
+        "type": "text",
+        "id": "owl_text2",
+        "label": "owl text 2",
+        "default": "We're making playtimes fun and sleeptimes peaceful"
+      },
+      {
+        "type": "text",
+        "id": "owl_heading2",
+        "label": "owl heading 2",
+        "default": "Yoga Pants"
+      },
+      {
+        "type": "text",
+        "id": "button_text2",
+        "label": "button text 2",
+        "default": "Show more"
+      },
+      {
+        "type": "text",
+        "id": "owl_text3",
+        "label": "owl text 3",
+        "default": "We're making playtimes fun and sleeptimes peaceful"
+      },
+      {
+        "type": "text",
+        "id": "owl_heading3",
+        "label": "owl heading 3",
+        "default": "Yoga Pants"
+      },
+      {
+        "type": "text",
+        "id": "button_text3",
+        "label": "button text 3",
+        "default": "Show more"
+      },
+      {
+        "type": "text",
+        "id": "owl_text4",
+        "label": "owl text 4",
+        "default": "We're making playtimes fun and sleeptimes peaceful"
+      },
+      {
+        "type": "text",
+        "id": "owl_heading4",
+        "label": "owl header 4",
+        "default": "Yoga Pants"
+      },
+      {
+        "type": "text",
+        "id": "button_text4",
+        "label": "button text 4",
+        "default": "Show more"
       }
     ]
   }

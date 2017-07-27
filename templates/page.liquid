@@ -1,57 +1,23 @@
-  <div class="trace middle-section">
-    <div id="homepage-slider" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
-      <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 11460px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(-1910px, 0px, 0px); transform-origin: 2865px center 0px; perspective-origin: 2865px center;"><div class="owl-item" style="width: 1910px;"><div class="item">
-      	<img src="//cdn.shopify.com/s/files/1/0672/6617/t/146/assets/homepage-hero-1.jpg?568514508069784598" alt="Baby in a sleeping bag with mum">
-      	<div class="caption-wrap right">
-      		<h2>The MORI Panda</h2>
-      		<h3>Our new 100% organic cotton Panda Collection represents the beauty of our environment. £1 of the sale of all Panda products will go towards adopting MORI pandas in China. Collection includes <b> Baby Sleeping Bags, T-shirts, Shorts, Hoodies, Joggers &amp; more...</b></h3>
-          	<img src="//cdn.shopify.com/s/files/1/0672/6617/t/146/assets/MORI_PANDA_without_tree_transparent_5.gif?568514508069784598" id="panda-gif">
-      		<a href="https://babymori.com/collections/mori-panda-collection" class="btn">SHOP NOW</a>
-      	</div>
-      </div></div><div class="owl-item" style="width: 1910px;"><div class="item">
-      	 	<img src="//cdn.shopify.com/s/files/1/0672/6617/t/146/assets/homepage-hero-2.jpg?568514508069784598" alt="baby mori organic">
-      	 	<div class="caption-wrap left">
-    	  		<h2>New for Summer</h2>
-    	  		<h3>Lightweight, breathable and organic summer essentials for your baby, keeping them cool and comfortable this summer. Shop the collection, including MORI's new Summer Dress.</h3>
-    	  		<a href="https://babymori.com/products/mori-dress" class="btn">Shop Now</a>
-    	  	</div>
-      	 </div></div><div class="owl-item" style="width: 1910px;"><div class="item">
-      	 	<img src="//cdn.shopify.com/s/files/1/0672/6617/t/146/assets/homepage-hero-3.jpg?568514508069784598" alt="mori baby towels in pink">
-      	 	<div class="caption-wrap left">
-    	  		<h2>The MORI Starter Set</h2>
-    	  		<h3>12 of our award winning essentials including all of our new-mum favourites - which will have you covered from day time to bath time and sleep time - allowing you to focus on those special moments. <b>All at 30% less than if you purchased the items individually</b></h3>
-    	  		<a href="https://babymori.com/pages/starter-sets" class="btn">Shop Now</a>
-    	  	</div>
-        </div></div></div></div
 
 
-
-
-
-
-    <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
-
-  <div id="first-anchor-img" class="split-screen1"></div>
-  <div class="split-screen">
-<h1>Crafted from bamboo and organic cotton</h1>
-
-<h3>MORI Yoga Pants feature a subtle elasticated waistband and to make sure they stay in place,
-  and a low rise crotch with cute pocket detail for ample nappy space and movement.</h3>
-  </div>
-
-  <div class="trace random-section">
-  <div id="full-screen"></div>
-  </div>
-  <div class="trace bottom-section">
-  <div class="split-screen"></div>
-  <div class="split-screen2"></div>
-  </div>
-
+{% section 'content' %}
 
 <script>
-$("#show-more").click(function() {
+$(".show-more").click(function() {
     $('html, body').animate({
-        scrollTop: $("#first-anchor-img").offset().top
+        scrollTop: $("#image_1").offset().top
     }, 2000);
 });
+$(document).ready(function() {
+  $('.owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        margin:0,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true
+  });
+
+$('.head-content').fadeIn('slow');
+})
 </script>

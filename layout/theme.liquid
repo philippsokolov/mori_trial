@@ -8,9 +8,10 @@
   <meta name="theme-color" content="{{ settings.color_primary }}">
   <meta name="robots" content="noindex"> <!--  // lets at least try keep this quiet. ^^ -->
   <link rel="canonical" href="{{ canonical_url }}">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Raleway" rel="stylesheet">
 
-
-    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png">
 
 
   {% capture seo_title %}
@@ -54,6 +55,9 @@
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
   {{ 'slick.css' | asset_url | stylesheet_tag }}
   {{ 'slick.js' | asset_url | script_tag }}
+  {{ 'owl.carousel.css' | asset_url | stylesheet_tag }}
+  {{ 'owl.theme.default.css' | asset_url | stylesheet_tag }}
+  {{ 'owl.carousel.js' | asset_url | script_tag }}
   {{ 'mori_styles.css' | asset_url | stylesheet_tag }}
 </head>
 
