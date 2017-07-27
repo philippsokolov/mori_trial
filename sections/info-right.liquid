@@ -1,7 +1,9 @@
 <div class="info-right" id="image-two">
-    <div class="info-image-right">
-        <img src="{{ 'image1.jpg' | asset_url }}" alt="">
-    </div>
+    {% if section.settings.image != blank %}
+        <div class="info-image-right">
+             <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+        </div>
+    {% endif %}
     <div class="info-right-content">
     {% if section.settings.header != blank %}
             <h1>{{ section.settings.header | escape}}</h1>
@@ -27,6 +29,11 @@
         "type": "text",
         "label": "Text",
         "default": "ll styles feature a white front with preferred colour on the back of the leg to create a stylish design. MORI’s yoga pants can be paired with our t-shirts or cardigans for a daytime outfit, or worn as pyjamas with a bodysuit."
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
       }
     ]
   }
