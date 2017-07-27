@@ -3,12 +3,12 @@
         {% for assertion in section.blocks %}
             {% if assertion.settings.text != blank %}
                 <div class="assertion">
-                <p><i class="fa fa-check"></i> {{ assertion.settings.text }}</p>
+                <p><i class="fa fa-check"></i> {{ assertion.settings.text | escape }}</p>
             </div>
             {% endif %}
         {% endfor %}
     </div>
-    <a href="https://babymori.com/collections/mori-baby-essentials/products/yoga-pant" class="btn">{% if section.settings.buttontext != blank %}{{ section.settings.buttontext }}{% endif %}</a>
+    <a href="https://babymori.com/collections/mori-baby-essentials/products/yoga-pant" class="btn">{% if section.settings.buttontext != blank %}{{ section.settings.buttontext  | escaped  }}{% endif %}</a>
 </div>
 
 {% schema %}
