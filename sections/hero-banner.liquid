@@ -1,4 +1,9 @@
 <div class="hero-image">
+    {% if section.settings.image != nil %}
+      <div class="h-image">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      </div>
+    {% endif %}
     <div class="hero-text">
         {% if section.settings.header != blank %}
             <h1>{{ section.settings.header | escape}}</h1>
@@ -26,6 +31,11 @@
         "type": "text",
         "label": "Subtitle",
         "default": "We’re making playtimes fun and sleeptimes peaceful"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
       }
     ]
   }
@@ -35,15 +45,24 @@
   /* The hero image */
 
   .hero-image {
-      /* The image to be used as a background */
-      background-image: url("{{ 'hero1.jpg' | asset_img_url }}");
       /* Set a specific height */
       height: 600px;
-      /* Position and center the image to be responsive */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       position: relative;
+  }
+
+  .h-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+  }
+
+  .h-image img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
   }
 
 
