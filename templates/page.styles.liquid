@@ -1,7 +1,3 @@
-{% comment %}
-  Custom template for testing styles applied to RTE content.
-  Remove before deploying to production/publishing your theme.
-{% endcomment %}
 
 <style>
 /* Styleguide styles */
@@ -9,6 +5,9 @@
   opacity: 0.5;
   font-style: italic;
   margin-left: -20px;
+}
+body {
+  background-color: red!important;
 }
 </style>
 
@@ -366,26 +365,13 @@
   </ul>
 
   <h4 class="docs-title">Social icons</h4>
-  <ul>
-    <li>{% include 'icon-facebook' %}</li>
-    <li>{% include 'icon-instagram' %}</li>
-    <li>{% include 'icon-pinterest' %}</li>
-    <li>{% include 'icon-snapchat' %}</li>
-    <li>{% include 'icon-tumblr' %}</li>
-    <li>{% include 'icon-twitter' %}</li>
-    <li>{% include 'icon-vimeo' %}</li>
-    <li>{% include 'icon-youtube' %}</li>
-  </ul>
 
   <h4 class="docs-title">General icons</h4>
   <ul>
     <li>{% include 'icon-arrow-down' %}</li>
-    <li>{% include 'icon-cart' %}</li>
     <li>{% include 'icon-close' %}</li>
     <li>{% include 'icon-hamburger' %}</li>
     <li>{% include 'icon-minus' %}</li>
     <li>{% include 'icon-plus' %}</li>
-    <li>{% include 'icon-rss' %}</li>
-    <li>{% include 'icon-search' %}</li>
   </ul>
 </div>

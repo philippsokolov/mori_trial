@@ -1,5 +1,27 @@
-<h1>{{ page.title }}</h1>
 
-<div class="rte">
-  {{ page.content }}
-</div>
+  <!-- {{ page.content }} -->
+  <div class="trace middle-section">
+  <div id="first-anchor-img" class="split-screen1"></div>
+  <div class="split-screen">
+<h1>Crafted from bamboo and organic cotton</h1>
+
+<h3>MORI Yoga Pants feature a subtle elasticated waistband and to make sure they stay in place,
+  and a low rise crotch with cute pocket detail for ample nappy space and movement.</h3>
+  </div>
+
+  <div class="trace random-section">
+  <div id="full-screen"></div>
+  </div>
+  <div class="trace bottom-section">
+  <div class="split-screen"></div>
+  <div class="split-screen2"></div>
+  </div>
+
+
+<script>
+$("#show-more").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#first-anchor-img").offset().top
+    }, 2000);
+});
+</script>

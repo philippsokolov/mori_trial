@@ -9,7 +9,7 @@
     },
     "404": {
       "title": "404 Página Não Encontrada",
-      "subtext_html": "A página que solicitou não existe. Clique <a href=\"/collections/all\">aqui</a> para continuar as suas compras."
+      "subtext_html": "A página que solicitou não existe. Clique <a href=\"\/collections\/all\">aqui<\/a> para continuar as suas compras."
     },
     "password_page": {
       "opening_soon": "Abre Brevemente",
@@ -23,7 +23,7 @@
       "signup_form_email_placeholder": "O seu email",
       "signup_form_submit": "Submeter",
       "signup_form_success": "Iremos enviar-lhe um email imediatamente antes de abrirmos!",
-      "admin_link_html": "É o dono da loja? <a href=\"/admin\">Inicie sessão aqui</a>",
+      "admin_link_html": "É o dono da loja? <a href=\"\/admin\">Inicie sessão aqui<\/a>",
       "password_link": "Entre usando a palavra-passe",
       "powered_by_shopify_html": "Esta loja será movida por {{ shopify }}"
     },
@@ -80,7 +80,7 @@
       "checkout": "Check-Out",
       "empty": "O seu carrinho de compras está neste momento vazio.",
       "cookies_required": "Ative cookies para poder usar o carrinho de compras",
-      "continue_browsing_html": "Continue a ver <a href=\"/collections/all\">aqui</a>.",
+      "continue_browsing_html": "Continue a ver <a href=\"\/collections\/all\">aqui<\/a>.",
       "item_quantity": "Quantidade de itens",
       "savings": "Está a poupar"
     },
@@ -265,7 +265,7 @@
       "add_to_apple_wallet": "Adicionar ao Apple Wallet"
     }
   },
-  "date_formats":{
+  "date_formats": {
     "month_day_year": "%d de %B de %Y"
   }
 }

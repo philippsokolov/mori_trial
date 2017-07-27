@@ -3,19 +3,28 @@
 	<a href="#" id="show_slider_options">SHOW SLIDER OPTIONS ----> </a>
 </div>
 
-<script type="text/javascript">
+<script>
+var slider_html = "<br><a href='#' id='show_slider' style='display:none;''>Open the slider</a>";
+$(document).on('click', '#show_slider_options', function(e) {
+	e.preventDefault() //prevent hash appending to end of url.
+if ($('.slider_wrapper').length == 1 && $('#show_slider').length < 1) {
+$(".slider_wrapper").append(slider_html);
+$('#show_slider').slideDown('fast')
+	}
+})
 
-	$("#show_slider_options").click(function() {
-		$(".slider_wrapper").append('<br><a href="#" id="show_slider">Open the slider</a>');
-	});
-
-	$("#show_slider").click(function() {
-		$(".slider_wrapper").append("<div class=sl-slider><div><img src={{ 'sl1.png' | asset_img_url: 'medium' }}></div><div><img src={{ 'sl2.png' | asset_img_url: 'medium' }}></div><div><img src={{ 'sl3.png' | asset_img_url: 'medium' }}></div></div>");
-	});
-
-	$('.sl-slider').slick({
-     slidesToShow: 1,
-     dots: true
- 	});
-	
+$(document).on('click', '#show_slider', function() {
+	var slider_html = "<div class='sl-slider'>\
+	<div><img class='sl-slider-image' src={{ 'sl1.png' | asset_img_url: 'medium' }}></div>\
+	<div><img class='sl-slider-image' src={{ 'sl2.png' | asset_img_url: 'medium' }}></div>\
+	<div><img class='sl-slider-image' src={{ 'sl3.png' | asset_img_url: 'medium' }}></div>\
+	</div>"
+	if ($('.slider_wrapper').length == 1) { //ensure presence and inevitability of more than 1 to avoid double init of slick and/or double append.
+$(".slider_wrapper").append(slider_html);
+$('.sl-slider').slick({
+	slidesToShow: 1,
+	dots: true
+})
+	}
+})
 </script>
