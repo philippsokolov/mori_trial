@@ -1,0 +1,39 @@
+<div class="info-left" id="image-one">
+    <div class="info-image-left">
+        <img src="{{ 'image2.jpg' | asset_url }}" alt="">
+    </div>
+    <div class="info-left-content">
+    {% if section.settings.header != blank %}
+            <h1>{{ section.settings.header | escape}}</h1>
+        {% endif %}
+        {% if section.settings.text != blank %}
+            <p>{{ section.settings.text | escape }}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Info Left",
+    "settings": [
+      {
+        "id": "header",
+        "type": "text",
+        "label": "Header",
+        "default": "Crafted from bamboo and organic cotton"
+      },
+      {
+        "id": "text",
+        "type": "text",
+        "label": "Text",
+        "default": "MORI Yoga Pants feature a subtle elasticated waistband to make sure they stay in place, and a low rise crotch with cute pocket detail for ample nappy space and movement."
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

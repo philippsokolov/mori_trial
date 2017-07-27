@@ -1,0 +1,46 @@
+<div class="assertions">
+    <div class="assertion-container">
+        {% for assertion in section.blocks %}
+            {% if assertion.settings.text != blank %}
+                <div class="assertion">
+                <p><i class="fa fa-check"></i> {{ assertion.settings.text }}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <a href="" class="btn">{% if section.setting.buttontext != blank %}{{ section.settings.buttontext }}{% endif %}</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Assertions",
+    "max_blocks": 3,
+    "settings": [
+        {
+            "id": "buttontext",
+            "type": "text",
+            "label": "Button title",
+            "default": "Buy now"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Text",
+            "settings": [
+            {
+                "label": "Text",
+                "id": "text",
+                "type": "text"
+            }
+            ]
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,38 @@
+<div class="hero-image">
+    <div class="hero-text">
+        {% if section.settings.header != blank %}
+            <h1>{{ section.settings.header | escape}}</h1>
+        {% endif %}
+        
+        {% if section.settings.subtitle != blank %}
+            <p>{{ section.settings.subtitle | escape }}</p>
+        {% endif %}
+        <a href="#image-one" class="btn">Show more</a>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero banner",
+    "settings": [
+      {
+        "id": "header",
+        "type": "text",
+        "label": "Header",
+        "default": "Yoga pants"
+      },
+      {
+        "id": "subtitle",
+        "type": "text",
+        "label": "Subtitle",
+        "default": "We’re making playtimes fun and sleeptimes peaceful"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
