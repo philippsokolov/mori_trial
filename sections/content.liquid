@@ -1,12 +1,10 @@
 <div class="page-content">
-
-
-
   <div id="top-section">
     <div class="clearfix"></div>
 {% if section.settings.image1 != blank %}
   <img class="feature_img" id="image_1" src="{{ section.settings.image1 | img_url: 'master' }}"/>
 {% endif %}
+
 <div class="info-right pull-right">
     <h1>{{ section.settings.text1 }}</h1>
     <h2>{{ section.settings.text2 }}</h2>
@@ -21,12 +19,12 @@
     <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit1 }}&nbsp;&nbsp;
   </h4>
     {% endif %}
-    {% if section.settings.benefit1 != blank %}
+    {% if section.settings.benefit2 != blank %}
     <h4 class="blocky">
     <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit2 }}&nbsp;&nbsp;
   </h4>
     {% endif %}
-    {% if section.settings.benefit1 != blank %}
+    {% if section.settings.benefit3 != blank %}
     <h4 class="blocky">
     <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit3 }}
   </h4>
@@ -35,8 +33,7 @@
 <br>
   <a class="btn buynow" href='https://babymori.com/collections/mori-baby-essentials/products/yoga-pant'>{{ section.settings.button_text }}</a>
   </div>
-
-
+  
   <div id="bottom-section">
   <div class="info-left pull-left">
     <h1>{{ section.settings.heading }}</h1>

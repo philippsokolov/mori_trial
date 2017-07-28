@@ -32,6 +32,7 @@ a.text_link {
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
     cursor:pointer;
+    text-decoration:none;
 }
 
 .btn.mori_green {
@@ -202,13 +203,6 @@ p.bold {
     margin-top: 1.5em
 }
 
-p.price {
-    font-family: "Raleway", sans-serif !important;
-    color: #999;
-    font-size: 1.15em;
-    font-weight: 400;
-    margin-bottom: 1.5em
-}
 
 .center {
     margin: auto;
@@ -340,6 +334,12 @@ margin-bottom:100px;
   margin-top:100px;
 }
 
+.bug-fix {
+  position:absolute;
+  top:5px;
+  left:200px;
+}
+
 
 .info-right {
   width:40%;
@@ -354,9 +354,13 @@ padding-top:130px;
 
 }
 
+/* mobile */
+
 @media (max-width: 600px) {
 
-
+.slider_wrapper {
+  margin-top:30px;
+}
   #top-main-margin {
     height::100px;
     }

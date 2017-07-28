@@ -13,7 +13,7 @@ $('#show_slider').slideDown('fast')
 	}
 })
 
-$(document).on('click', '#show_slider', function() {
+$(document).one('click', '#show_slider', function() {
 	var slider_html = "<div class='sl-slider'>\
 	<div><img class='sl-slider-image' src={{ 'sl1.png' | asset_img_url: 'medium' }}></div>\
 	<div><img class='sl-slider-image' src={{ 'sl2.png' | asset_img_url: 'medium' }}></div>\
@@ -26,5 +26,8 @@ $('.sl-slider').slick({
 	dots: true
 })
 	}
+})
+$(document).ready(function() {
+	$('.bug-fix').attr('href', 'trial-page').text('Back')
 })
 </script>
