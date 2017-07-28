@@ -2,44 +2,20 @@
   <div class="logo smaller">
 {% if section.settings.mori_logo != blank %}
     <a href='https://babymori.com/' target="_target">
-    <img src="{{ section.settings.mori_logo | img_url: 'master' }}"/></a>
+    <img id="mori-logo" src="{{ section.settings.mori_logo | img_url: 'master' }}"/></a>
 {% endif %}
   </div>
+
+<div class="header_image">
+  <img class="mobi" id="cover" src="{{ section.settings.cover_image | img_url: 'master' }}"/></a>
+  <div id="container_text">
+  <h1 class="big_page_heading">{{ section.settings.heading}}</h1>
+  <h2>{{ section.settings.heading_text}}</h2>
+  <a class="btn show-more">{{section.settings.button_text}}</a>
 </div>
-<div class="head-content">
-
-<div class="owl-carousel owl-theme">
-
-<div class="owl1">
-  <img src="{{ section.settings.carousel1 | img_url: 'master' }}"/></a>
-  <h2>{{ section.settings.owl_heading1 }}</h2>
-  <h1>{{ section.settings.owl_text1}}</h1>
-  <a class="btn show-more">{{section.settings.button_text1}}</a>
 </div>
-
-<div class="owl2">
-  <img src="{{ section.settings.carousel2 | img_url: 'master' }}"/></a>
-  <h2>{{ section.settings.owl_heading2 }}</h2>
-  <h1>{{ section.settings.owl_text2}}</h1>
-  <a class="btn show-more">{{section.settings.button_text2}}</a>
 </div>
 
-<div class="owl3">
-  <img src="{{ section.settings.carousel3 | img_url: 'master' }}"/></a>
-  <h2>{{ section.settings.owl_heading3 }}</h2>
-  <h1>{{ section.settings.owl_text3}}</h1>
-  <a class="btn show-more">{{section.settings.button_text3}}</a>
-</div>
-
-<div class="owl4">
-  <img src="{{ section.settings.carousel4 | img_url: 'master' }}"/></a>
-  <h2>{{ section.settings.owl_heading4 }}</h2>
-  <h1>{{ section.settings.owl_text4 }}</h1>
-  <a class="btn show-more" >{{section.settings.button_text4}}</a>
-</div>
-
-</div>
-</div>
 {% schema %}
   {
     "name": "Header",
@@ -51,95 +27,26 @@
       },
       {
         "type": "image_picker",
-        "id": "carousel1",
-        "label": "Carousel 1"
-      },
-      {
-        "type": "image_picker",
-        "id": "carousel2",
-        "label": "Carousel 2"
-      },
-      {
-        "type": "image_picker",
-        "id": "carousel3",
-        "label": "Carousel 3"
-      },
-      {
-        "type": "image_picker",
-        "id": "carousel4",
-        "label": "Carousel 4"
+        "id": "cover_image",
+        "label": "Cover Image"
       },
       {
         "type": "text",
-        "id": "owl_text1",
-        "label": "owl text 1",
-        "default": "We're making playtimes fun and sleeptimes peaceful"
-      },
-      {
-        "type": "text",
-        "id": "owl_heading1",
-        "label": "owl heading 1",
-        "default": "Yoga Pants"
-      },
-      {
-        "type": "text",
-        "id": "button_text1",
-        "label": "button text 1",
+        "id": "button_text",
+        "label": "button text",
         "default": "Show more"
       },
       {
         "type": "text",
-        "id": "owl_text2",
-        "label": "owl text 2",
+        "id": "heading_text",
+        "label": "Heading Text",
         "default": "We're making playtimes fun and sleeptimes peaceful"
       },
       {
         "type": "text",
-        "id": "owl_heading2",
-        "label": "owl heading 2",
+        "id": "heading",
+        "label": "Heading",
         "default": "Yoga Pants"
-      },
-      {
-        "type": "text",
-        "id": "button_text2",
-        "label": "button text 2",
-        "default": "Show more"
-      },
-      {
-        "type": "text",
-        "id": "owl_text3",
-        "label": "owl text 3",
-        "default": "We're making playtimes fun and sleeptimes peaceful"
-      },
-      {
-        "type": "text",
-        "id": "owl_heading3",
-        "label": "owl heading 3",
-        "default": "Yoga Pants"
-      },
-      {
-        "type": "text",
-        "id": "button_text3",
-        "label": "button text 3",
-        "default": "Show more"
-      },
-      {
-        "type": "text",
-        "id": "owl_text4",
-        "label": "owl text 4",
-        "default": "We're making playtimes fun and sleeptimes peaceful"
-      },
-      {
-        "type": "text",
-        "id": "owl_heading4",
-        "label": "owl header 4",
-        "default": "Yoga Pants"
-      },
-      {
-        "type": "text",
-        "id": "button_text4",
-        "label": "button text 4",
-        "default": "Show more"
       }
     ]
   }

@@ -1,38 +1,53 @@
 <div class="page-content">
+
+
+
   <div id="top-section">
-
+    <div class="clearfix"></div>
 {% if section.settings.image1 != blank %}
-  <img id="image_1" src="{{ section.settings.image1 | img_url: 'master' }}"/>
+  <img class="feature_img" id="image_1" src="{{ section.settings.image1 | img_url: 'master' }}"/>
 {% endif %}
-
-  <div class="caption-wrap">
+<div class="info-right pull-right">
     <h1>{{ section.settings.text1 }}</h1>
-    <h3>{{ section.settings.text2 }}</h3>
+    <h2>{{ section.settings.text2 }}</h2>
+      <img id="mori-panda" src="{{ 'mori_panda.gif' | asset_img_url }}"/>
 </div>
 </div>
-  <div class="random-section">
+
+  <div class="buy_now_section">
   <h4 class="blocky">
     {% if section.settings.benefit1 != blank %}
+    <h4 class="blocky">
     <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit1 }}&nbsp;&nbsp;
-    {% endif %}
-    {% if section.settings.benefit1 != blank %}
-    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit2 }}&nbsp;&nbsp;
-    {% endif %}
-    {% if section.settings.benefit1 != blank %}
-    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit3 }}
-    {% endif %}
-
   </h4>
+    {% endif %}
+    {% if section.settings.benefit1 != blank %}
+    <h4 class="blocky">
+    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit2 }}&nbsp;&nbsp;
+  </h4>
+    {% endif %}
+    {% if section.settings.benefit1 != blank %}
+    <h4 class="blocky">
+    <i class="fa fa-check"></i>&nbsp;{{ section.settings.benefit3 }}
+  </h4>
+    {% endif %}
+<div class="clearfix"></div>
+<br>
   <a class="btn buynow" href='https://babymori.com/collections/mori-baby-essentials/products/yoga-pant'>{{ section.settings.button_text }}</a>
   </div>
 
-  <div class="split-screen"><h2>{{ section.settings.heading }}</h2>
-    <h4>{{ section.settings.descriptive_text }}</h4></div>
+
+  <div id="bottom-section">
+  <div class="info-left pull-left">
+    <h1>{{ section.settings.heading }}</h1>
+    <h2>{{ section.settings.descriptive_text }}</h2>
   </div>
-<div class="bottom_image">
-<img src="{{ section.settings.image3 | img_url: 'master' }}"/>
+
+  <img class="feature_img" id="image_3" src="{{ section.settings.image3 | img_url: 'master' }}"/>
 </div>
+
 </div>
+
 
 {% schema %}
   {
@@ -42,11 +57,6 @@
         "type": "image_picker",
         "id": "image1",
         "label": "image 1"
-      },
-      {
-        "type": "image_picker",
-        "id": "image2",
-        "label": "image 2"
       },
       {
         "type": "text",
